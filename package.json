@@ -1,0 +1,64 @@
+{
+  "name": "clean-code",
+  "displayName": "BMB Clean Code",
+  "description": "This Visual Studio Code (VSCode) extension provides tools to help you maintain clean and readable code by automating the removal of comments, console logs, and unused imports. It includes individual commands for each of these tasks and a comprehensive command that combines all of them.",
+  "publisher": "BenmradBileSemiColon",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "clean-code.removeComments",
+        "title": "Remove Comments"
+      },
+      {
+        "command": "clean-code.removeConsoleLogs",
+        "title": "Remove Console Logs"
+      },
+      {
+        "command": "clean-code.removeUnusedImports",
+        "title": "Remove Unused Imports"
+      },
+      {
+        "command": "clean-code.cleanCode",
+        "title": "Clean Code"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenMradB/clean-code-vsce"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
