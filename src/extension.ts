@@ -42,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
     });
   };
 
-  const removeConsolLogsHandler = () => {
+  const removeConsols = () => {
     const editor = vscode.window.activeTextEditor;
 
     if (!editor) {
@@ -51,8 +51,8 @@ export function activate(context: vscode.ExtensionContext) {
     const document = editor.document;
     const text = document.getText();
 
-    const consoleLogRegex = /console\.log\(([\s\S]*?)\);?/g;
-    const cleanedText = text.replace(consoleLogRegex, "");
+    const consoleMethodsRegex = /console\.\w+\(([\s\S]*?)\);?/g;
+    const cleanedText = text.replace(consoleMethodsRegex, "");
 
     editor.edit((editBuilder) => {
       editBuilder.replace(
@@ -308,8 +308,8 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   const removeConsoleLogs = vscode.commands.registerCommand(
-    "clean-code.removeConsoleLogs",
-    removeConsolLogsHandler
+    "clean-code.removeConsols",
+    removeConsols
   );
 
   const cleanCode = vscode.commands.registerCommand(

@@ -11,8 +11,8 @@ This Visual Studio Code (VSCode) extension provides tools to help you maintain c
 
 2. **Remove Console Logs**
 
-   - **Command:** `Remove Console Logs`
-   - **Description:** Removes all `console.log` statements from the active file, ensuring that no debug logs are left in your production code.
+   - **Command:** `Remove Consols`
+   - **Description:** Removes all consols `(console.log, console.error, console.info ...)` statements from the active file, ensuring that no debug logs are left in your production code.
 
 3. **Remove Unused Imports**
 
@@ -55,15 +55,12 @@ import { Label } from "@/components/ui/label";
 } from "@radix-ui/react-icons"; */
 
 export default function HomePage() {
+  console.info("This is a console info");
   const [state, setState] = useState(0);
 
-  console.log(
-    "This is a console log will be removed by the Clean Code extension."
-  );
+  console.log("This is a console log");
   useEffect(() => {}, []);
-  console.log(
-    "This is a console log will be removed by the Clean Code extension."
-  );
+  console.error("This is a console error ");
 
   return (
     <main className="w-full h-full">
