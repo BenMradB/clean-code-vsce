@@ -1,4 +1,6 @@
-# VSCode Clean Code Extension
+# Clean Code
+
+[![MasterHead](https://github.com/BenMradB/clean-code-vsce/blob/main/clean-code.png?raw=true)](https://rishavchanda.io)
 
 This Visual Studio Code (VSCode) extension provides tools to help you maintain clean and readable code by automating the removal of comments, console logs, and unused imports. It includes individual commands for each of these tasks and a comprehensive command that combines all of them.
 
@@ -29,7 +31,7 @@ This Visual Studio Code (VSCode) extension provides tools to help you maintain c
 2. Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
 3. Type one of the following commands and press Enter:
    - `Remove Comments`
-   - `Remove Console Logs`
+   - `Remove Consols`
    - `Remove Unused Imports`
    - `Clean Code`
 
