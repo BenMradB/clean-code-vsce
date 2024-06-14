@@ -2,7 +2,7 @@
   "name": "clean-code",
   "displayName": "BMB Clean Code",
   "description": "This Visual Studio Code (VSCode) extension provides tools to help you maintain clean and readable code by automating the removal of comments, console logs, and unused imports. It includes individual commands for each of these tasks and a comprehensive command that combines all of them.",
-  "publisher": "BenmradBileSemiColon",
+  "publisher": "BenmradBilel",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
